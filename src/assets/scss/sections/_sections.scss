@@ -1,0 +1,57 @@
+.section {
+  padding: 10px 10px 10px 260px;
+  min-height: 100vh;
+  @include respoM {
+    padding: 0;
+    .wrapper-tools{
+      border-radius: 0 !important;
+      height: 100vh !important;
+    }
+  }
+  .wrapper-tools {
+    height: calc(100vh - 20px);
+    border-radius: $radius-main;
+    box-shadow: $shadow-smooth;
+    padding: clamp(30px, 10vh, 100px) clamp(40px, 10vw, 140px);
+    overflow-x: scroll;
+    @include respoM {
+      padding: 40px 40px 40px 90px;
+    }
+    .title-section {
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      h2 {
+        margin-right: 15px;
+      }
+    }
+    .tools {
+      max-width: 800px;
+      flex-direction: column;
+    }
+  }
+  .security {
+    background: url("../src/assets/img/background.png"), $color-primary;
+  }
+  .home {
+    background: url("../src/assets/img/background.png"), $color-fifth;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .text {
+    background: url("../src/assets/img/background.png"), $color-secondary;
+  }
+  .design {
+    background: url("../src/assets/img/background.png"), $color-third;
+  }
+  .code {
+    background: url("../src/assets/img/background.png"), $color-fourth;
+  }
+}

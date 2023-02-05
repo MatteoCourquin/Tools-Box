@@ -1,0 +1,109 @@
+.wrapepr-header {
+  width: fit-content;
+  height: 100vh;
+  padding: 10px;
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  z-index: 999;
+  transition: $transition-main;
+
+  @include respoM {
+    width: 70px;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+  }
+
+  &:hover {
+    width: 260px;
+    header {
+      padding-left: $spacing-xl !important;
+
+      .navbar-list p,
+      .navbar-list hr {
+        opacity: 1;
+      }
+
+      .navbar-list li a {
+        margin-left: 10px !important;
+      }
+    }
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    left: 0;
+    top: 0;
+    height: 100%;
+    transition: $transition-main;
+    padding-left: $spacing-xl;
+    overflow-y: scroll;
+
+    @include respoM {
+      padding-left: 13px !important;
+      box-shadow: $shadow-smooth;
+      padding-left: $spacing-sm;
+      background: $color-white;
+      overflow: hidden;
+      border-radius: $radius-main;
+
+      .navbar-list p,
+      .navbar-list hr {
+        opacity: 0;
+        transition: $transition-main;
+        display: none;
+      }
+
+      .navbar-list li a {
+        margin-left: $spacing-sm !important;
+      }
+    }
+
+    .navbar-list {
+      margin-top: 80px;
+      width: 100%;
+
+      p {
+        padding-top: $spacing-sm;
+      }
+
+      li {
+        width: 200px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+        list-style: none;
+        white-space: nowrap;
+
+        svg {
+          width: 24px;
+        }
+
+        a {
+          font-family: $font-roboto-light;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+}
+
+// .security {
+//   border: 1px solid $color-primary;
+// }
+// .home {
+//   border: 1px solid $color-fifth;
+// }
+// .text {
+//   border: 1px solid $color-secondary;
+// }
+// .design {
+//   border: 1px solid $color-third;
+// }
+// .code {
+//   border: 1px solid $color-fourth;
+// }

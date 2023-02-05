@@ -1,0 +1,41 @@
+.tools {
+  display: flex;
+  justify-content: space-between;
+  .content-input {
+    width: 100%;
+  }
+}
+
+.container-image-download {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-container {
+  width: fit-content;
+  height: fit-content;
+
+  .img-generate {
+    width: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    object-fit: cover;
+    margin: 10px 0;
+    aspect-ratio: 16/9;
+  }
+}
+.button-download {
+  display: flex;
+  justify-content: center;
+  .icon-download {
+    margin-left: 15px;
+    transition: $transition-main;
+  }
+  &:hover {
+    .icon-download path {
+      fill: #fff;
+    }
+  }
+}

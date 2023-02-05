@@ -1,0 +1,64 @@
+.button {
+  box-shadow: $shadow-main;
+  background: $color-white;
+  margin-bottom: $spacing-xl;
+  border: $border-main;
+  outline: none;
+  padding: 8px 35px;
+  display: inline-block;
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  border-radius: $radius-main;
+  transition: $transition-main;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: $color-black;
+  font-family: $font-roboto-bold;
+
+  &:hover {
+    box-shadow: none;
+    background: $color-black;
+    color: $color-white;
+  }
+
+  &:hover {
+    .icon-arrow path {
+      fill: $color-white;
+    }
+  }
+
+  .icon-arrow {
+    margin: 0 5px;
+  }
+}
+
+.button.button-small {
+  width: fit-content;
+}
+
+.button-color-converter {
+  .icon-arrow {
+    transform: rotate(90deg);
+  }
+}
+
+.format-button-section-grid, .format-button-section {
+  display: grid;
+  column-gap: $spacing-xl;
+  width: 100%;
+}
+
+.format-button-section-grid{
+  grid-template-columns: repeat(2, 1fr);
+  @include respoXS{
+    grid-template-columns: 1fr;
+  }
+}
+
+.format-button-section {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}

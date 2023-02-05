@@ -1,0 +1,250 @@
+
+.content-input{
+  margin-bottom: $spacing-xl;
+}
+
+.label {
+  display: block;
+  margin-bottom: $spacing-sm;
+}
+
+.json-viewer, .react-json-view{
+  padding: 10px;
+  overflow-x: scroll;
+}
+
+.text-area, .result{
+  width: 100%;
+  border:$border-main;
+  border-radius: 5px;
+  overflow: hidden;
+  color: $color-black;
+  background-color: $color-white;
+  box-shadow: $shadow-main;
+  position: relative;
+  
+  textarea {
+    padding: 10px;
+    font-size: 16px;
+    font-family: $font-roboto-regular;
+    color: $color-black;
+    resize: none;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+  }
+
+  .icon-copy {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    transition: $transition-main;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+
+  .bubble {
+    position: absolute;
+    right: 40px;
+    top: 8px;
+    width: fit-content;
+    background-color: $color-black;
+    color: $color-white;
+    border-radius: $radius-main;
+    padding: 5px 15px;
+    text-align: center;
+    font-size: 10px;
+    animation: fade-out 3s forwards;
+  }
+}
+
+.height-area {
+  height: clamp(100px, 50vh, 300px);
+}
+
+.height-input {
+  height: auto;
+}
+
+// Input Toggle
+.toggle {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $color-white;
+  box-shadow: $shadow-main;
+  border:$border-main;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 27px;
+  width: 27px;
+  left: 3px;
+  bottom: 3px;
+  background-color: $color-black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input[type="checkbox"]:checked+.slider {
+  background-color: $color-white;
+}
+
+input[type="checkbox"]:focus+.slider {
+  box-shadow: $shadow-main;
+}
+
+input[type="checkbox"]:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 999px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+// Input Text
+input[type="text"],
+.input,
+input[type=number] {
+  font-size: 16px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: $shadow-main;
+  color: $color-black;
+  background-color: $color-white;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Input Range
+input[type="range"] {
+  height: 28px;
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type="range"]:focus {
+  outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: $shadow-main;
+  background: $color-white;
+  border-radius: 5px;
+  border:$border-main;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  border:$border-main;
+  height: 20px;
+  width: 20px;
+  border-radius: 27px;
+  background: $color-black;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6px;
+}
+
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: $color-white;
+}
+
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: $shadow-main;
+  background: $color-white;
+  border-radius: 5px;
+  border:$border-main;
+}
+
+input[type="range"]::-moz-range-thumb {
+  box-shadow: $shadow-main;
+  border:$border-main;
+  height: 20px;
+  width: 20px;
+  border-radius: 27px;
+  background: $color-white;
+  cursor: pointer;
+}
+
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"]::-ms-fill-lower {
+  background: $color-white;
+  border:$border-main;
+  border-radius: 10px;
+  box-shadow: $shadow-main;
+}
+
+input[type="range"]::-ms-fill-upper {
+  background: $color-white;
+  border:$border-main;
+  border-radius: 10px;
+  box-shadow: $shadow-main;
+}
+
+input[type="range"]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: $shadow-main;
+  border:$border-main;
+  height: 20px;
+  width: 20px;
+  border-radius: 27px;
+  background: $color-white;
+  cursor: pointer;
+}
+
+input[type="range"]:focus::-ms-fill-lower {
+  background: $color-white;
+}
+
+input[type="range"]:focus::-ms-fill-upper {
+  background: $color-white;
+}

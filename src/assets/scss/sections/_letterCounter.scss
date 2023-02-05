@@ -1,0 +1,25 @@
+.result-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: $spacing-xl;
+  width: 100%;
+  @include respoXS {
+    row-gap: $spacing-xl;
+    grid-template-columns: 1fr;
+  }
+
+  .result {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+
+    .number-result {
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+}

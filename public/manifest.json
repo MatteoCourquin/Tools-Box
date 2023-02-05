@@ -1,0 +1,49 @@
+{
+  "name": "Tools Box for developpers",
+  "short_name": "Tools Box",
+  "icons": [
+    {
+      "src": "favicon/favicon-16x16.png",
+      "type": "image/png",
+      "sizes": " 16x16",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon/favicon-32x32.png",
+      "type": "image/png",
+      "sizes": "32x32",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon/mstile-150x150.png",
+      "type": "image/png",
+      "sizes": "150x150",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon/apple-touch-icon.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "favicon/android-chrome-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "description": "A tools box for developpers with Security, Text, Design and Code tools !",
+  "start_url": "",
+  "scope": "./",
+  "lang": "en"
+}
